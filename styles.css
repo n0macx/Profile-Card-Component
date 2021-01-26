@@ -38,7 +38,7 @@ body {
 }
 img {
     border-radius: 50%;
-    border: 5px solid red;
+    border: 5px solid white;
     margin-top: 85px;
 }
 .card-header {
