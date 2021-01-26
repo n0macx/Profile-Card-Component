@@ -20,7 +20,7 @@ body {
                       url(/images/bg-pattern-bottom.svg);
     background-repeat: no-repeat;
     background-size: 1000px;     
-    background-position: top -600px left -20vw, bottom -600px right -200px;
+    background-position: top -600px left -20vw, bottom -650px right -250px;
     display: grid;
     grid-template-rows: 1fr 20px;
     place-items: center;
@@ -73,9 +73,11 @@ img {
 }
 .item1 {
     border-bottom-left-radius: 15px;
+    padding-left: 40px;
 }
 .item3 {
     border-bottom-right-radius: 15px;
+    padding-right: 40px;
 }
 .lighter-font {
     font-weight: 400;
@@ -91,11 +93,4 @@ span {
 .data p:last-child {
     padding-top: 10px;
     font-size: .8em;
-}
-.attribution, 
-.attribution > a {
-    align-self: end;
-    font-weight: 400;
-    font-size: .8em; 
-    text-decoration: none;
 }
