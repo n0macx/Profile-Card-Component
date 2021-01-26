@@ -34,7 +34,7 @@ body {
     display: grid;
     grid-template-rows: 140px 150px 90px;
     background-color: white;
-    box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 35px 25px rgba(0, 0, 0, 0.1);
 }
 img {
     border-radius: 50%;
