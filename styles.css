@@ -14,13 +14,20 @@ body {
     line-height: 1.2;
     color: var(--black);
 }
+
+h1,
+h2 {
+    font-size: 18px;
+}
+
+
 .wrapper {
     background: hsl(185, 75%, 39%);
-    background-image: url(/images/bg-pattern-top.svg),
-                      url(/images/bg-pattern-bottom.svg);
+    background-image: url(/Profile-Card-Component/images/bg-pattern-top.svg),
+                      url(/Profile-Card-Component/images/bg-pattern-bottom.svg);
     background-repeat: no-repeat;
     background-size: 1000px;     
-    background-position: top -600px left -20vw, bottom -650px right -250px;
+    background-position: top -600px left -20vw, bottom -600px right -200px;
     display: grid;
     grid-template-rows: 1fr 20px;
     place-items: center;
@@ -34,25 +41,34 @@ body {
     display: grid;
     grid-template-rows: 140px 150px 90px;
     background-color: white;
-    box-shadow: 0 0 35px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
 }
 img {
     border-radius: 50%;
     border: 5px solid white;
-    margin-top: 85px;
+    margin-top: 75px;
 }
 .card-header {
     position: relative;
     justify-items: center;
-    background-image: url(/images/bg-pattern-card.svg);                
+    background-image: url(/profile-card-component-main/images/bg-pattern-card.svg); 
     border-radius: 15px 15px 0 0;
-    z-index: 1;
+    z-index: 5;
+}
+.card-header::before {
+    content: '';
+    right: 0;
+    bottom: 0;
+    border-bottom: 30px solid white;
+    border-left: 350px solid transparent;
+    z-index: -1;
+    position: absolute;
 }
 .data {
     align-self: end;
     padding-bottom: 20px;
 }
-.data > p:first-child:hover {
+.data > h1:hover {
     color: rgba(0, 0, 0, 0.6);
     cursor: pointer; 
 }
@@ -60,24 +76,25 @@ img {
     border-top: 1px solid hsl(200, 10%, 90%);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    border-radius: 0 0 15px 15px;   
+    border-radius: 0 0 15px 15px;
+    
 }
-.card-footer > p {
+.card-footer > h2 {
     display:flex;
     flex-direction: column;
     justify-content: center;
 }
-.card-footer > p:hover {
+.card-footer > h2:hover {
     background: rgba(0, 0 ,0 ,0.05);
     cursor: pointer; 
 }
 .item1 {
     border-bottom-left-radius: 15px;
-    padding-left: 40px;
+    padding-left: 20px;
 }
 .item3 {
     border-bottom-right-radius: 15px;
-    padding-right: 40px;
+    padding-right: 20px;
 }
 .lighter-font {
     font-weight: 400;
@@ -90,7 +107,8 @@ span {
     color: var(--grey-light);
     letter-spacing: 1px;
 }
-.data p:last-child {
-    padding-top: 10px;
+.data p {
+    padding-top: 5px;
     font-size: .8em;
+    cursor: pointer; 
 }
