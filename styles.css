@@ -13,25 +13,22 @@ body {
     font-weight: 700;
     line-height: 1.2;
     color: var(--black);
+    background: hsl(185, 75%, 39%);
+    background-image: url(/Profile-Card-Component/images/bg-pattern-top.svg),
+    url(/Profile-Card-Component/images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    background-size: 800px;    
+    background-position: top -400px left -600px, bottom -400px right -500px;
 }
-
 h1,
 h2 {
     font-size: 18px;
 }
-
-
 .wrapper {
-    background: hsl(185, 75%, 39%);
-    background-image: url(/Profile-Card-Component/images/bg-pattern-top.svg),
-                      url(/Profile-Card-Component/images/bg-pattern-bottom.svg);
-    background-repeat: no-repeat;
-    background-size: 1000px;     
-    background-position: top -600px left -20vw, bottom -600px right -200px;
     display: grid;
     grid-template-rows: 1fr 20px;
     place-items: center;
-    min-height: 100vh;
+    height: 100vh;
 }
 .card {
     width: 350px;
@@ -51,7 +48,7 @@ img {
 .card-header {
     position: relative;
     justify-items: center;
-    background-image: url(/profile-card-component-main/images/bg-pattern-card.svg); 
+    background-image: url(/Profile-Card-Component/images/bg-pattern-card.svg); 
     border-radius: 15px 15px 0 0;
     z-index: 5;
 }
@@ -111,4 +108,11 @@ span {
     padding-top: 5px;
     font-size: .8em;
     cursor: pointer; 
+}
+
+@media (min-width: 900px) {
+    body {
+        background-size: 1000px;
+        background-position: top -600px left -20vw, bottom -600px right -200px;
+    }
 }
